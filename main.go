@@ -14,7 +14,7 @@ func main() {
 	router.
 		Methods("GET").
 		Path("/").
-		HandlerFunc(endpointAction)
+		HandlerFunc(endpointHandler)
 
 	n := negroni.New()
 	n.Use(&mw.Logger{})
@@ -26,6 +26,6 @@ func main() {
 	}
 }
 
-func endpointAction(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("Endpoint finished")
+func endpointHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Println("Endpoint handler called")
 }
