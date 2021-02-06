@@ -1,6 +1,6 @@
 module github.com/johan-lejdung/go-microservice-middleware-guide
 
-go 1.12
+go 1.15
 
 require (
 	github.com/gorilla/mux v1.7.3
